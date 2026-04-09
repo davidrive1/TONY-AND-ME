@@ -29,7 +29,7 @@
                 </label>
                  <nav>
                     <ul>
-                        <li><a href="#" onclick="mostrar('inicio')" id="selected"></a></li>
+                        <li><a href="#" onclick="mostrar('inicio')" id="selected">Inicio</a></li>
                         <li><a href="#" onclick="mostrar('lobotomy')">Lobotomy Corp</a>
                             <ul>
                                 <li><a href="#">Malkuth</a></li>
@@ -65,6 +65,7 @@
                             </ul>
                         
                         </li>
+                        <li><a href="#" onclick="mostrar('formulario')">Formulario</a></li>
                     </ul>
                  </nav>
             </div>
@@ -129,6 +130,22 @@
         <p>El verdadero objetivo de Limbus Company es descubrir y controlar las Ramas Doradas (Golden Boughs), reliquias de gran poder que quedaron en las ruinas de la antigua Corporación Lobotomy tras su caída.</p>
     </article> 
  </div>
+    
+    <div id="formulario" class="seccion" style="display: none">
+    <h2>Formulario</h2>
+    <form id="miFormulario">
+        <input type="text" required placeholder="Nombre">
+        <input type="email" required placeholder="Correo">
+        <input type="password" required placeholder="Contraseña">
+        <button type="submit">Enviar</button>
+    </form>
+    </div>
+    <script>
+        document.getElementById("miFormulario").addEventListener("submit", function(e){
+            e.preventDefault();
+            alert("Formulario enviado");
+        });
+    </script>
     
       <script>
         function mostrar(idSeccion) {
