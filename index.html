@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js"
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <header>
+        <div class="header__superior">
+            <div class="logo">
+                <img src="img/PM_logo.png" alt="">
+            </div>
+            <div class="search">
+                <input type="search" placeholder="Qué deseas buscar?">
+            </div>
+
+        </div>
+
+        <div class="container__menu">
+            <div class="menu">
+                <input type="checkbox" id="check__menu">
+                <label id="#label__check" for="check__menu">
+                    <i class="fas fa-bars icon__menu"></i>
+                </label>
+                 <nav>
+                    <ul>
+                        <li><a href="#" onclick="mostrar('inicio')" id="selected"></a></li>
+                        <li><a href="#" onclick="mostrar('lobotomy')">Lobotomy Corp</a>
+                            <ul>
+                                <li><a href="#">Malkuth</a></li>
+                                <li><a href="#">Yesod</a></li>
+                                <li><a href="#">Hod</a></li>
+                                <li><a href="#">Netzach</a></li>
+                                <li><a href="#">Tiphereth</a></li>
+                                <li><a href="#">Gebura</a></li>
+                                <li><a href="#">Chesed</a></li>
+                                <li><a href="#">Binah</a></li>
+                                <li><a href="#">Hokma</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#" onclick="mostrar('Ruina')">Library of ruina</a>
+                            <ul>
+                                <li><a href="#">Historia</a></li>
+                                <li><a href="#">Tecnología</a></li>
+                                <li><a href="#">Literatura</a></li>
+                                <li><a href="#">Arte</a></li>
+                                <li><a href="#">Ciencias Naturales</a></li>
+                                <li><a href="#">Lenguajes</a></li>
+                                <li><a href="#">Ciencias Sociales</a></li>
+                                <li><a href="#">Filosofia</a></li>
+                                <li><a href="#">Religión</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#" onclick="mostrar('Limbus')">Limbus company</a>
+                            <ul>
+                                <li><a href="#">LCB</a></li>
+                                <li><a href="#">LCC</a></li>
+                                <li><a href="#">LCA</a></li>
+                                <li><a href="#">LCB</a></li>
+                            </ul>
+                        
+                        </li>
+                    </ul>
+                 </nav>
+            </div>
+        </div>
+    </header>
+
+    
+    <main id="inicio" class="seccion" style="display: block">
+        <article>
+            <h2>Project Moon </h2>
+            <p>Project Moon es un estudio de desarrollo de videojuegos independiente de Corea del Sur ubicado en Suwon, Corea del Sur, y fundado y </p>
+            <p>dirigido por Kim Ji Hoon. Fue fundada el 18 de noviembre de 2016, durante el cuarto año de Kim Ji-hoon en la Universidad.</p>
+            <p> La empresa originalmente solo comenzó con 7 empleados y desde entonces se ha expandido a 45 empleados en el estudio de juegos y </p>
+            <p>7 empleados en su restaurante HamHamPangPang.</p>
+        </article>
+
+        <article>
+            <h2>Juegos</h2>
+            <p>Sus juegos y otras obras relacionadas tienen lugar en una distopía de ciencia ficción llamada simplemente La ciudad, donde los avances excesivos </p>
+            <p>en ciencia y tecnología se producen a costa de los derechos humanos y la moral y está inspirado en el género cyberpunk. Si bien sus obras tienden a tener un tono </p>
+            <p>sombrío y pesimista, sirven como advertencia sobre los peligros del capitalismo desenfrenado y las tecnologías emergentes, y como himno a la esperanza de que la humanidad </p>
+            <p>pueda corregir sus errores y avanzar por el camino correcto.</p>
+        </article>
+    </main>
+
+             <div id="lobotomy" class="seccion" style="display: none">
+       <article>
+            <h2>Lobotomy </h2>
+            <p>Lobotomy Corporation (로보토미 코퍼레이션, Robotomi Kopeoreisyeon), or L Corp. (L사, L Sa), fue uno de los veintiséis Alas y  el propietario del Nido del Distrito 12</p>
+            <p>antes del colapso de la corporación. La Singularidad de L Corp. era la capacidad de materializar la mente humana a través de una fórmula llamada Cogito,</p>
+            <p>y la compañía la utilizó para promocionarse como un productor de energía ecológico para la Ciudad y las otras  Alas. En secreto, esto se hizo mediante la creación y el uso de Anomalías,</p>
+            <p>entidades monstruosas y altamente peligrosas creadas a partir de experimentos con Singularity de L Corp</p>
+        </article>
+     </div>
+
+    <div id="Ruina" class="seccion" style="display: none">
+         <h2>Library of Ruina</h2>
+        <p>Contenido específico para la Library of Ruina.</p>
+    </div>
+
+    <div id="Limbus" class="seccion" style="display: none">
+        <h2>Limbus Company</h2>
+        <p>Contenido específico para la Limbus Company.</p>
+    </div>
+    
+      <script>
+        function mostrar(idSeccion) {
+            const secciones = document.querySelectorAll('.seccion');
+            secciones.forEach(seccion => {
+                seccion.style.display = 'none';
+            }); 
+            document.getElementById(idSeccion).style.display = 'block';
+        }
+      </script>
+</body>
+</html>
